@@ -1,0 +1,41 @@
+<polymer-element name="x-finistjug">
+  <template>
+    <style>
+    	@host {
+        	/* Three equivalent rules, in order of preference. */
+        	:scope {
+          		display: block; /* Note: by default elements are always display:inline. */
+          		text-align: center;
+        	}
+        	* {
+          		display: block;
+        	}
+        	x-foo {
+          		display: block;
+        	}
+      	}
+      	#box {
+      		display: inline-block;
+      		padding: 40px;
+      		border-radius: 40px;
+      		background-color: #72bb30;
+      		font-family: sans-serif;
+      		color: white;
+      	}
+      	#box h1 {
+      		font-size: 50pt;
+      		font-weight: bold;
+      	}
+      	#box p {
+      		font-size: 30pt;
+      	}
+    </style>
+    <div id="box">
+    	<h1>Bonsoir le FinistJUG</h1> 
+    	<p><content></content></p>
+    </div>
+  </template>
+  <script>
+    Polymer('x-finistjug');
+  </script>
+</polymer-element>

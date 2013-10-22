@@ -31,7 +31,7 @@
       	#box p {
       		font-size: 30pt;
       	}
-      	#box button {
+      	#box input {
       		font-size: 30pt;
 			border-radius: 10px;
 			background-color: white;
@@ -41,7 +41,7 @@
     <div id="box">
     	<h1>Bonsoir {{whoami}}</h1> 
     	<p><content></content></p>
-    	<button on-click="sayHello">Click me!</button>
+    	<input value="{{whoami}}" placeholder="Your name here..." />
     </div>
   </template>
   <script>

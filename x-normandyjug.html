@@ -1,4 +1,4 @@
-<polymer-element name="x-finistjug">
+<polymer-element name="x-normandyjug">
   <template>
     <style>
     	@host {
@@ -11,7 +11,7 @@
         	* {
           		display: block;
         	}
-        	x-finistjug {
+        	x-normandyjug {
           		display: block;
         	}
         	*/
@@ -41,7 +41,7 @@
     <div id="box">
     	<h1>Bonsoir {{whoami}}</h1> 
     	<p><content></content></p>
-    	<button on-click="sayHello">Click me!</button>
+    	<button on-click="{{sayHello}}">Click me!</button>
     </div>
   </template>
   <script>
@@ -50,8 +50,8 @@
        of the element you’re creating. The second argument (optional) is an object that defines 
        your element’s prototype.
        */
-    Polymer('x-finistjug', { 
-    	whoami: "le FinistJUG", 
+    Polymer('x-normandyjug', { 
+    	whoami: "le NormaandyJUG", 
     	sayHello: function() {
           alert("Hello "+this.whoami);
     	}

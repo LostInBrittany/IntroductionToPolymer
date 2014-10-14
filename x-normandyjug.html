@@ -1,60 +1,52 @@
 <polymer-element name="x-normandyjug">
   <template>
     <style>
-      @host {
-          /* Three equivalent rules, in order of preference. */
-          :scope {
-              display: block; /* Note: by default elements are always display:inline. */
-              text-align: center;
-          }
-          /* Two orher rules
-          * {
-              display: block;
-          }
-          x-normandyjug {
-              display: block;
-          }
-          */
-        }
-        #box {
-          display: inline-block;
-          padding: 40px;
-          border-radius: 40px;
-          background-color: #72bb30;
-          font-family: sans-serif;
-          color: white;
-        }
-        #box h1 {
-          font-size: 50pt;
-          font-weight: bold;
-        }
-        #box p {
-          font-size: 30pt;
-        }
-        #box button {
-          font-size: 30pt;
-      border-radius: 10px;
-      background-color: white;
-      color: #72bb30;
-        }
+    	@host {
+        	/* Three equivalent rules, in order of preference. */
+        	:scope {
+          		display: block; /* Note: by default elements are always display:inline. */
+          		text-align: center;
+        	}
+        	/* Two orher rules
+        	* {
+          		display: block;
+        	}
+        	x-normandyjug {
+          		display: block;
+        	}
+        	*/
+      	}
+      	#box {
+      		display: inline-block;
+      		padding: 40px;
+      		border-radius: 40px;
+      		background-color: #72bb30;
+      		font-family: sans-serif;
+      		color: white;
+      	}
+      	#box h1 {
+      		font-size: 50pt;
+      		font-weight: bold;
+      	}
+      	#box p {
+      		font-size: 30pt;
+      	}
+      	#box input {
+      		font-size: 30pt;
+			border-radius: 10px;
+			background-color: white;
+			color: #72bb30;
+      	}
     </style>
     <div id="box">
-      <h1>Bonsoir {{whoami}}</h1> 
-      <p><content></content></p>
-      <button on-click="{{sayHello}}">Click me!</button>
+    	<h1>Bonsoir {{whoami}}</h1> 
+    	<p><content></content></p>
+    	<input value="{{whoami}}" placeholder="Your name here..." />
     </div>
   </template>
   <script>
-    /* Polymer(..) is a convenience wrapper for document.register, but also endows the element 
-       with special features like data binding and event mapping. Its first argument is the name 
-       of the element you’re creating. The second argument (optional) is an object that defines 
-       your element’s prototype.
-       */
     Polymer('x-normandyjug', { 
-      whoami: "le NormaandyJUG", 
-      sayHello: function() {
-          alert("Hello "+this.whoami);
-      }
+    	whoami: "le NormandyJUG"
     });
   </script>
 </polymer-element>

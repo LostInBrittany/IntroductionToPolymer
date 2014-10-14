@@ -11,7 +11,7 @@
         	* {
           		display: block;
         	}
-        	x-finistjug {
+        	x-normandyjug {
           		display: block;
         	}
         	*/
@@ -41,12 +41,20 @@
     <div id="box">
     	<h1>Bonsoir {{whoami}}</h1> 
     	<p><content></content></p>
-    	<input value="{{whoami}}" placeholder="Your name here..." />
+    	<button on-click="{{sayHello}}">Click me!</button>
     </div>
   </template>
   <script>
+    /* Polymer(..) is a convenience wrapper for document.register, but also endows the element 
+       with special features like data binding and event mapping. Its first argument is the name 
+       of the element you’re creating. The second argument (optional) is an object that defines 
+       your element’s prototype.
+       */
     Polymer('x-normandyjug', { 
-    	whoami: "le NormandyJUG"
+    	whoami: "le NormaandyJUG", 
+    	sayHello: function() {
+          alert("Hello "+this.whoami);
+    	}
     });
   </script>
 </polymer-element>

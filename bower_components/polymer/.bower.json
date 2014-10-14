@@ -1,25 +1,19 @@
 {
   "name": "polymer",
-  "description": "Leverage the future of the web platform today.",
-  "homepage": "http://www.polymer-project.org/",
-  "keywords": [
-    "util",
-    "client",
-    "browser"
-  ],
-  "author": "Polymer Authors <polymer-dev@googlegroups.com>",
-  "version": "0.0.20131010",
-  "main": [
-    "polymer.min.js"
-  ],
-  "_release": "0.0.20131010",
+  "private": true,
+  "dependencies": {
+    "platform": "Polymer/platform#^0.4.0",
+    "core-component-page": "Polymer/core-component-page#^0.4.0"
+  },
+  "homepage": "https://github.com/Polymer/polymer",
+  "version": "0.4.2",
+  "_release": "0.4.2",
   "_resolution": {
     "type": "version",
-    "tag": "0.0.20131010",
-    "commit": "94789c8b522271b54db7bf37a488f68599dbeda5"
+    "tag": "0.4.2",
+    "commit": "90270bc3b8f1537b849ca1b1c0283a7c0691c0f7"
   },
-  "_source": "git://github.com/components/polymer.git",
-  "_target": "~0.0.20131010",
-  "_originalSource": "polymer",
-  "_direct": true
+  "_source": "git://github.com/Polymer/polymer.git",
+  "_target": "~0.4.2",
+  "_originalSource": "Polymer/polymer"
 }
